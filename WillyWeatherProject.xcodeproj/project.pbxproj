@@ -15,6 +15,7 @@
 		7845175725961C3400C6E1F2 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845175625961C3400C6E1F2 /* HTTPResponse.swift */; };
 		7845175925961ED700C6E1F2 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845175825961ED700C6E1F2 /* HTTPStatus.swift */; };
 		7845175B2596254100C6E1F2 /* HTTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845175A2596254100C6E1F2 /* HTTPResult.swift */; };
+		7845175D2596259700C6E1F2 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845175C2596259700C6E1F2 /* HTTPError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7845175625961C3400C6E1F2 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		7845175825961ED700C6E1F2 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 		7845175A2596254100C6E1F2 /* HTTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResult.swift; sourceTree = "<group>"; };
+		7845175C2596259700C6E1F2 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				7845175625961C3400C6E1F2 /* HTTPResponse.swift */,
 				7845175825961ED700C6E1F2 /* HTTPStatus.swift */,
 				7845175A2596254100C6E1F2 /* HTTPResult.swift */,
+				7845175C2596259700C6E1F2 /* HTTPError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			files = (
 				7845175B2596254100C6E1F2 /* HTTPResult.swift in Sources */,
 				7845175725961C3400C6E1F2 /* HTTPResponse.swift in Sources */,
+				7845175D2596259700C6E1F2 /* HTTPError.swift in Sources */,
 				78451755259617C900C6E1F2 /* HTTPRequest.swift in Sources */,
 				7845173B25952D0700C6E1F2 /* MainViewController.swift in Sources */,
 				7845173725952D0700C6E1F2 /* AppDelegate.swift in Sources */,
