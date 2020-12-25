@@ -2,15 +2,21 @@ import Foundation
 
 public struct HTTPRequest {
     private var components: URLComponents = URLComponents()
-    public var method: HTTPMethod
-    public let headers: [String: String]
+    public var method: HTTPMethod = .get
+    public let headers: [String: String] = [:]
     public let body: HTTPBody = NoBody()
+    
+    public init() {}
     
 }
 
 public extension HTTPRequest {
     
-    var scheme: String  { components.scheme ?? "https" }
+    var scheme: String  {
+        get { components.scheme ?? "https" }
+        set { components.scheme = newValue }
+        
+    }
     
     var path: String {
         get { self.components.path }
@@ -25,4 +31,9 @@ public extension HTTPRequest {
     var url: URL? {
         get { self.components.url }
     }
+    
+    mutating func setQueryParams(params: Encodable) {
+        self.components.setQueryItems(with: params.dictionary as! [String : String])
+    }
+    
 }
