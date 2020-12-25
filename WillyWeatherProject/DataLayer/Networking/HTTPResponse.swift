@@ -12,5 +12,7 @@ public struct HTTPResponse {
     
     public var headers: [AnyHashable: Any] { response.allHeaderFields }
     
-    
+    public var status: HTTPStatus {
+        HTTPStatus(rawValue: self.response.statusCode) ?? .unknown
+    }
 }
