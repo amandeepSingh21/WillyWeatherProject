@@ -17,6 +17,7 @@
 		7845175B2596254100C6E1F2 /* HTTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845175A2596254100C6E1F2 /* HTTPResult.swift */; };
 		7845175D2596259700C6E1F2 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845175C2596259700C6E1F2 /* HTTPError.swift */; };
 		7845175F2596273100C6E1F2 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845175E2596273100C6E1F2 /* HTTPMethod.swift */; };
+		784517612596289600C6E1F2 /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517602596289600C6E1F2 /* HTTPBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7845175A2596254100C6E1F2 /* HTTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResult.swift; sourceTree = "<group>"; };
 		7845175C2596259700C6E1F2 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		7845175E2596273100C6E1F2 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		784517602596289600C6E1F2 /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				7845175825961ED700C6E1F2 /* HTTPStatus.swift */,
 				7845175A2596254100C6E1F2 /* HTTPResult.swift */,
 				7845175C2596259700C6E1F2 /* HTTPError.swift */,
+				784517602596289600C6E1F2 /* HTTPBody.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				78451755259617C900C6E1F2 /* HTTPRequest.swift in Sources */,
 				7845175F2596273100C6E1F2 /* HTTPMethod.swift in Sources */,
 				7845173B25952D0700C6E1F2 /* MainViewController.swift in Sources */,
+				784517612596289600C6E1F2 /* HTTPBody.swift in Sources */,
 				7845173725952D0700C6E1F2 /* AppDelegate.swift in Sources */,
 				7845175925961ED700C6E1F2 /* HTTPStatus.swift in Sources */,
 			);

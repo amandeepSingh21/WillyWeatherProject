@@ -4,7 +4,7 @@ public struct HTTPRequest {
     private var components: URLComponents = URLComponents()
     public var method: HTTPMethod
     public let headers: [String: String]
-    public let body: Data?
+    public let body: HTTPBody?
     
 }
 
