@@ -4,7 +4,7 @@ public struct HTTPRequest {
     private var components: URLComponents = URLComponents()
     public var method: HTTPMethod
     public let headers: [String: String]
-    public let body: HTTPBody?
+    public let body: HTTPBody = NoBody()
     
 }
 
@@ -20,5 +20,9 @@ public extension HTTPRequest {
     var host: String? {
         get { self.components.host }
         set { self.components.host = newValue }
+    }
+    
+    var url: URL? {
+        get { self.components.url }
     }
 }
