@@ -13,5 +13,7 @@ public struct HTTPError: Error {
         case insecureConnection
         case invalidResponse
         case unknown
+        case encodingFailure
+        case timedOut
     }
 }
