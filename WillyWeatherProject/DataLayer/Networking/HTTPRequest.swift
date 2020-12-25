@@ -1,4 +1,3 @@
-
 import Foundation
 
 public struct HTTPRequest {
@@ -9,16 +8,16 @@ public struct HTTPRequest {
     
 }
 
-extension HTTPRequest {
+public extension HTTPRequest {
     
-    public var scheme: String  { components.scheme ?? "https" }
+    var scheme: String  { components.scheme ?? "https" }
     
-    public var path: String {
+    var path: String {
         get { self.components.path }
         set { self.components.path = newValue }
     }
     
-    public var host: String? {
+    var host: String? {
         get { self.components.host }
         set { self.components.host = newValue }
     }
