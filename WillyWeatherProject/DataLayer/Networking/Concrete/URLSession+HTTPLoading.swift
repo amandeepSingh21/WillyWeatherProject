@@ -1,8 +1,5 @@
-import Foundation
 
-public protocol HTTPLoading {
-    func load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void)
-}
+import Foundation
 
 extension URLSession: HTTPLoading {
     public func load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void) {
