@@ -3,10 +3,13 @@ import Foundation
 public struct HTTPRequest {
     private var components: URLComponents = URLComponents()
     public var method: HTTPMethod = .get
-    public let headers: [String: String] = [:]
-    public let body: HTTPBody = NoBody()
+    public var headers: [String: String] = [:]
+    public var body: HTTPBody = NoBody()
     
-    public init() {}
+    public init() {
+        self.scheme = "https"
+        self.host = APIConfiguration.baseURL
+    }
     
 }
 
