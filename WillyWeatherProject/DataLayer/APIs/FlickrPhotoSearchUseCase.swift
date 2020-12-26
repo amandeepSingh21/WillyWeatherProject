@@ -2,5 +2,5 @@ import Foundation
 
 
 protocol FlickrPhotoSearchUseCase {
-    func query(request: FlickrRequest, completion: @escaping (HTTPResult) -> Void)
+    func query(request: HTTPRequest, completion: @escaping HTTPHandler)
 }
