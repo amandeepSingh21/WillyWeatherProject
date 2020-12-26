@@ -22,14 +22,17 @@
 		784517652596369600C6E1F2 /* HTTPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517642596369600C6E1F2 /* HTTPLoading.swift */; };
 		784517672596397200C6E1F2 /* NoBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517662596397200C6E1F2 /* NoBody.swift */; };
 		7845176D2596662A00C6E1F2 /* URLSession+HTTPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845176C2596662A00C6E1F2 /* URLSession+HTTPLoading.swift */; };
-		7845177425966EAD00C6E1F2 /* FlickrPhotosSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845177325966EAD00C6E1F2 /* FlickrPhotosSearchAPI.swift */; };
+		7845177425966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845177325966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift */; };
 		784517772596723B00C6E1F2 /* URLComponents+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517762596723B00C6E1F2 /* URLComponents+Extensions.swift */; };
 		784517792596729E00C6E1F2 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517782596729E00C6E1F2 /* Encodable+Extensions.swift */; };
-		7845177B259672DE00C6E1F2 /* FlickrPhotoSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845177A259672DE00C6E1F2 /* FlickrPhotoSearchUseCase.swift */; };
-		7845177D259673B900C6E1F2 /* FlickrRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845177C259673B900C6E1F2 /* FlickrRequest.swift */; };
+		7845177B259672DE00C6E1F2 /* OMDBFetchMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845177A259672DE00C6E1F2 /* OMDBFetchMoviesUseCase.swift */; };
+		7845177D259673B900C6E1F2 /* OMDBRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845177C259673B900C6E1F2 /* OMDBRequest.swift */; };
 		7845177F259673EC00C6E1F2 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845177E259673EC00C6E1F2 /* APIConfiguration.swift */; };
 		784517812596965A00C6E1F2 /* MockLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517802596965A00C6E1F2 /* MockLoader.swift */; };
-		784517892596986600C6E1F2 /* FlickrPhotosSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517882596986600C6E1F2 /* FlickrPhotosSearchAPITests.swift */; };
+		784517892596986600C6E1F2 /* OMDBFetchMoviesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517882596986600C6E1F2 /* OMDBFetchMoviesAPITests.swift */; };
+		7845179125976F3500C6E1F2 /* OMDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845179025976F3500C6E1F2 /* OMDBModel.swift */; };
+		784517932597718D00C6E1F2 /* RemoteAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517922597718D00C6E1F2 /* RemoteAPIError.swift */; };
+		78451795259775F200C6E1F2 /* OMDBAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78451794259775F200C6E1F2 /* OMDBAPIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,16 +63,19 @@
 		784517642596369600C6E1F2 /* HTTPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPLoading.swift; sourceTree = "<group>"; };
 		784517662596397200C6E1F2 /* NoBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBody.swift; sourceTree = "<group>"; };
 		7845176C2596662A00C6E1F2 /* URLSession+HTTPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+HTTPLoading.swift"; sourceTree = "<group>"; };
-		7845177325966EAD00C6E1F2 /* FlickrPhotosSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotosSearchAPI.swift; sourceTree = "<group>"; };
+		7845177325966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBFetchMoviesAPI.swift; sourceTree = "<group>"; };
 		784517762596723B00C6E1F2 /* URLComponents+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Extensions.swift"; sourceTree = "<group>"; };
 		784517782596729E00C6E1F2 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
-		7845177A259672DE00C6E1F2 /* FlickrPhotoSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoSearchUseCase.swift; sourceTree = "<group>"; };
-		7845177C259673B900C6E1F2 /* FlickrRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrRequest.swift; sourceTree = "<group>"; };
+		7845177A259672DE00C6E1F2 /* OMDBFetchMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBFetchMoviesUseCase.swift; sourceTree = "<group>"; };
+		7845177C259673B900C6E1F2 /* OMDBRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBRequest.swift; sourceTree = "<group>"; };
 		7845177E259673EC00C6E1F2 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		784517802596965A00C6E1F2 /* MockLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoader.swift; sourceTree = "<group>"; };
 		784517862596986600C6E1F2 /* WillyWeatherProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WillyWeatherProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		784517882596986600C6E1F2 /* FlickrPhotosSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotosSearchAPITests.swift; sourceTree = "<group>"; };
+		784517882596986600C6E1F2 /* OMDBFetchMoviesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBFetchMoviesAPITests.swift; sourceTree = "<group>"; };
 		7845178A2596986600C6E1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7845179025976F3500C6E1F2 /* OMDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBModel.swift; sourceTree = "<group>"; };
+		784517922597718D00C6E1F2 /* RemoteAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAPIError.swift; sourceTree = "<group>"; };
+		78451794259775F200C6E1F2 /* OMDBAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBAPIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +196,8 @@
 		784517522596165400C6E1F2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7845177C259673B900C6E1F2 /* FlickrRequest.swift */,
+				7845179025976F3500C6E1F2 /* OMDBModel.swift */,
+				78451794259775F200C6E1F2 /* OMDBAPIError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,9 +257,11 @@
 		7845177225966CCE00C6E1F2 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
-				7845177325966EAD00C6E1F2 /* FlickrPhotosSearchAPI.swift */,
-				7845177A259672DE00C6E1F2 /* FlickrPhotoSearchUseCase.swift */,
+				7845177325966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift */,
+				7845177A259672DE00C6E1F2 /* OMDBFetchMoviesUseCase.swift */,
+				7845177C259673B900C6E1F2 /* OMDBRequest.swift */,
 				7845177E259673EC00C6E1F2 /* APIConfiguration.swift */,
+				784517922597718D00C6E1F2 /* RemoteAPIError.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -269,7 +278,7 @@
 		784517872596986600C6E1F2 /* WillyWeatherProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				784517882596986600C6E1F2 /* FlickrPhotosSearchAPITests.swift */,
+				784517882596986600C6E1F2 /* OMDBFetchMoviesAPITests.swift */,
 				7845178A2596986600C6E1F2 /* Info.plist */,
 			);
 			path = WillyWeatherProjectTests;
@@ -375,26 +384,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7845177D259673B900C6E1F2 /* FlickrRequest.swift in Sources */,
+				7845177D259673B900C6E1F2 /* OMDBRequest.swift in Sources */,
 				7845175B2596254100C6E1F2 /* HTTPResult.swift in Sources */,
 				7845175725961C3400C6E1F2 /* HTTPResponse.swift in Sources */,
 				784517672596397200C6E1F2 /* NoBody.swift in Sources */,
+				78451795259775F200C6E1F2 /* OMDBAPIError.swift in Sources */,
 				7845175D2596259700C6E1F2 /* HTTPError.swift in Sources */,
 				78451755259617C900C6E1F2 /* HTTPRequest.swift in Sources */,
 				7845177F259673EC00C6E1F2 /* APIConfiguration.swift in Sources */,
 				784517772596723B00C6E1F2 /* URLComponents+Extensions.swift in Sources */,
 				7845175F2596273100C6E1F2 /* HTTPMethod.swift in Sources */,
-				7845177B259672DE00C6E1F2 /* FlickrPhotoSearchUseCase.swift in Sources */,
+				7845177B259672DE00C6E1F2 /* OMDBFetchMoviesUseCase.swift in Sources */,
 				7845173B25952D0700C6E1F2 /* MainViewController.swift in Sources */,
 				784517612596289600C6E1F2 /* HTTPBody.swift in Sources */,
+				7845179125976F3500C6E1F2 /* OMDBModel.swift in Sources */,
 				784517652596369600C6E1F2 /* HTTPLoading.swift in Sources */,
 				7845176325962A7300C6E1F2 /* JSONBody.swift in Sources */,
 				7845173725952D0700C6E1F2 /* AppDelegate.swift in Sources */,
 				7845176D2596662A00C6E1F2 /* URLSession+HTTPLoading.swift in Sources */,
 				784517812596965A00C6E1F2 /* MockLoader.swift in Sources */,
 				784517792596729E00C6E1F2 /* Encodable+Extensions.swift in Sources */,
-				7845177425966EAD00C6E1F2 /* FlickrPhotosSearchAPI.swift in Sources */,
+				7845177425966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift in Sources */,
 				7845175925961ED700C6E1F2 /* HTTPStatus.swift in Sources */,
+				784517932597718D00C6E1F2 /* RemoteAPIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				784517892596986600C6E1F2 /* FlickrPhotosSearchAPITests.swift in Sources */,
+				784517892596986600C6E1F2 /* OMDBFetchMoviesAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

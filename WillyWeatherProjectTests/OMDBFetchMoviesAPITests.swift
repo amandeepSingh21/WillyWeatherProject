@@ -1,43 +1,43 @@
 import XCTest
 @testable import WillyWeatherProject
 
-class FlickrPhotosSearchAPITests: XCTestCase {
+class OMDBFetchMoviesAPITests: XCTestCase {
     
     let mock = MockLoader()
     
-    lazy var mockAPI: FlickrPhotoSearchUseCase = { FlickrPhotosSearchAPI(loader: mock) }()
-    lazy var realAPI: FlickrPhotoSearchUseCase = { FlickrPhotosSearchAPI() }()
+    lazy var mockAPI: OMDBFetchMoviesUseCase = { OMDBFetchMoviesAPI(loader: mock) }()
+    lazy var realAPI: OMDBFetchMoviesUseCase = { OMDBFetchMoviesAPI() }()
     
     
     
     //MARK:- Mock
     func test_200_OK_WithNoBody() {
-        var result: HTTPResult?
+        var result: OMDBResult?
         let expectation = self.expectation(description: "200 status")
         
         mock.then { request, handler in
-            handler(.success(HTTPResponse(request: request, response: self.responseForTesting(request: request, statusCode: 200) , body: nil)))
+            handler(.success(HTTPResponse(request: request, response: self.responseForTesting(request: request, statusCode: 200) , body: Data())))
         }
-        mockAPI.query(request: self.request) { (res) in
+        mockAPI.fetch(request: self.request) { (res) in
             result = res
             expectation.fulfill()
             
         }
         
         waitForExpectations(timeout: 5, handler: nil)
-        
-        XCTAssertEqual(result?.response?.status, HTTPStatus.success)
+        XCTAssertThrowsError(try result?.get())
+      
     }
     
     
     func test_200_OK_WithValidResponseBody() {
-        var result: HTTPResult?
+        var result: OMDBResult?
         let expectation = self.expectation(description: "Valid body")
         
         mock.then { request, handler in
             handler(.success(HTTPResponse(request: request, response: self.responseForTesting(request: request, statusCode: 200) , body: self.responseBody)))
         }
-        mockAPI.query(request: self.request) { (res) in
+        mockAPI.fetch(request: self.request) { (res) in
             result = res
             expectation.fulfill()
             
@@ -45,11 +45,11 @@ class FlickrPhotosSearchAPITests: XCTestCase {
         
         waitForExpectations(timeout: 5, handler: nil)
         
-        XCTAssertEqual(result?.response?.body, self.responseBody)
+         XCTAssertNoThrow(try result?.get())
     }
     
     func test_Request_With_Body_Not_Throws() {
-        var result: HTTPResult?
+        var result: OMDBResult?
         let expectation = self.expectation(description: "Not throws")
         
         
@@ -59,8 +59,8 @@ class FlickrPhotosSearchAPITests: XCTestCase {
             handler(.success(HTTPResponse(request: request, response: self.responseForTesting(request: request, statusCode: 200) , body: self.responseBody)))
         }
         var r = self.request
-        r.body = JSONBody(FlickrRequest(text: "batman", page: 1))
-        mockAPI.query(request: self.request) { (res) in
+        r.body = JSONBody(OMDBRequest(text: "batman", page: 1))
+        mockAPI.fetch(request: self.request) { (res) in
             result = res
             expectation.fulfill()
             
@@ -75,13 +75,13 @@ class FlickrPhotosSearchAPITests: XCTestCase {
     
     
     func test_Request_With_Body_Throws() {
-        var result: HTTPResult?
+        var result: OMDBResult?
         let expectation = self.expectation(description: "Throws")
         
         
         var r = self.request
         r.body = JSONBody(ThrowAbleBody())
-        realAPI.query(request: r) { (res) in
+        realAPI.fetch(request: r) { (res) in
             result = res
             expectation.fulfill()
             
@@ -95,13 +95,13 @@ class FlickrPhotosSearchAPITests: XCTestCase {
 
     //MARK:- Real
     func test_Request_Fails_With_Invalid_URL() {
-        var result: HTTPResult?
+        var result: OMDBResult?
         let expectation = self.expectation(description: "Fails: Invalid URL")
         
         
         var r = self.request
         r.path = "this.will.fail.com"
-        realAPI.query(request: r) { (res) in
+        realAPI.fetch(request: r) { (res) in
             result = res
             expectation.fulfill()
             
@@ -115,22 +115,22 @@ class FlickrPhotosSearchAPITests: XCTestCase {
     }
     
     func test_Request_Success_With_Headers() {
-        var result: HTTPResult?
+        var result: OMDBResult?
         let expectation = self.expectation(description: "Success: with headers")
         
         
         
         var r = self.request
-        r.headers = ["Key": "Value"]
+        //r.headers = ["Key": "Value"]
         
-        realAPI.query(request: r) { (res) in
+        realAPI.fetch(request: r) { (res) in
             result = res
             expectation.fulfill()
             
         }
         
         waitForExpectations(timeout: 5, handler: nil)
-        XCTAssertEqual(result?.request.headers, r.headers)
+         XCTAssertNoThrow(try result?.get())
 
     }
     
@@ -148,21 +148,37 @@ class FlickrPhotosSearchAPITests: XCTestCase {
     }
     
     private var request: HTTPRequest {
+        
         var r = HTTPRequest()
-        r.path = "/services/rest/"
-        r.setQueryParams(params: FlickrRequest(text: "bat", page: 1))
+     
+        r.setQueryParams(params: OMDBRequest(text: "batman", page: 1))
         return r
     }
     
+   
+    
     private var responseBody: Data {
+        
         let json = """
-            {
-            "name" : "amandeep",
-            "title": iOS Dev
+                {
+                "Search": [
+                    {
+                        "Title": "Bat in Black",
+                        "Year": "2018",
+                        "imdbID": "tt7656454",
+                        "Type": "movie",
+                        "Poster": "https://m.media-amazon.com/images/M/MV5BN2UzZDExZTEtM2IxZS00YmI3LThiNWQtN2Y5ZGZjNzI4ODBjXkEyXkFqcGdeQXVyNzM2NzgxOQ@@._V1_SX300.jpg"
+                    },
+                ],
+                "totalResults": "183",
+                "Response": "True"
             }
             """
         return Data(json.utf8)
     }
+    
+  
+
   
     
 }
