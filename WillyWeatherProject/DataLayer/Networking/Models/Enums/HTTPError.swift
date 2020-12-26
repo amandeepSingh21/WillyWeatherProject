@@ -17,3 +17,13 @@ public struct HTTPError: Error {
         case timedOut
     }
 }
+
+public extension HTTPError {
+    
+    init(request: HTTPRequest, code: Code) {
+        self.code = code
+        self.request = request
+        self.response = nil
+        self.underlyingError = nil
+    }
+}
