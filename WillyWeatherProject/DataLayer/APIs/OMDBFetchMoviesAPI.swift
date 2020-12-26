@@ -2,18 +2,23 @@ import Foundation
 
 struct OMDBFetchMoviesAPI: OMDBFetchMoviesUseCase {
     
-    let jsonStore: JSONStore<OMDBModel> = JSONStore(storageType: .permanent, filename: "movies.json")
+   
     let loader: HTTPLoading
+    let cacheLoader: JSONCache<OMDBModel>
     
-    init(loader: HTTPLoading = URLSession.shared) {
+    
+    init(loader: HTTPLoading = URLSession.shared,
+         cacheLoader: JSONCache<OMDBModel> = JSONStore<OMDBModel>(storageType: .cache)) {
         self.loader = loader
+        self.cacheLoader = cacheLoader
+        
     }
     
 
     
     func fetch(request: HTTPRequest, completion: @escaping OMDBResultHandler) {
        
-        if let movies = self.jsonStore.storedValue(at: cacheName(request: request)) {
+        if let movies = self.cacheLoader.storedValue(at: self.cacheName(request: request) ) {
             completion(.success(movies))
             return
         }
@@ -40,7 +45,7 @@ struct OMDBFetchMoviesAPI: OMDBFetchMoviesUseCase {
         do {
             let decoded  = try decoder.decode(OMDBModel.self, from: response.body!) //safe
             
-            self.jsonStore.save(decoded, filename: cacheName(request: response.request))
+            self.cacheLoader.save(decoded, uniquieIdentifier: cacheName(request: response.request))
             completion(.success(decoded))
         } catch {
             do {
@@ -52,7 +57,7 @@ struct OMDBFetchMoviesAPI: OMDBFetchMoviesUseCase {
         }
     }
     
-    private func cacheName(request: HTTPRequest) -> String {
+     func cacheName(request: HTTPRequest) -> String {
         var page = ""
         var term = ""
         request.params?.forEach({ (item) in
@@ -66,6 +71,9 @@ struct OMDBFetchMoviesAPI: OMDBFetchMoviesUseCase {
         
         return term + "&" + page
     }
+
+    
+  
     
 }
 
