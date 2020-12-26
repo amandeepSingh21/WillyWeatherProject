@@ -1,6 +1,6 @@
 
 import Foundation
-
+public typealias HTTPHandler = (HTTPResult) -> Void
 public typealias HTTPResult = Result<HTTPResponse,HTTPError>
 
 extension HTTPResult {
