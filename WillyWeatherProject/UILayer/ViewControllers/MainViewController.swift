@@ -5,7 +5,13 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        let api = FlickrPhotosSearchAPI()
+        var r = HTTPRequest()
+        r.path = "/services/rest/"
+        r.setQueryParams(params: FlickrRequest(text: "bat", page: 1))
+        api.query(request: r ) { (res) in
+            
+        }
     }
 
 
