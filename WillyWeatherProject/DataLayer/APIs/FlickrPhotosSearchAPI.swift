@@ -1,14 +1,16 @@
 import Foundation
 
 struct FlickrPhotosSearchAPI: FlickrPhotoSearchUseCase {
-    func query(request: FlickrRequest, completion: @escaping (HTTPResult) -> Void) {
-        var r = HTTPRequest()
-        r.scheme = "https"
-        r.host = APIConfiguration.baseURL
-        r.path = "/services/rest/"
-        r.setQueryParams(params: request)
+    let loader: HTTPLoading
+    init(loader: HTTPLoading = URLSession.shared) {
+        self.loader = loader
+    }
     
-        URLSession.shared.load(request: r) { (result) in
+    
+    func query(request: HTTPRequest, completion: @escaping HTTPHandler) {
+       
+    
+        loader.load(request: request) { (result) in
             print(result.response?.status)
             completion(result)
         }
