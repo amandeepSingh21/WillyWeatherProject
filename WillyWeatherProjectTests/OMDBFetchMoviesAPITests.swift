@@ -4,9 +4,9 @@ import XCTest
 class OMDBFetchMoviesAPITests: XCTestCase {
     
     let mock = MockLoader()
-    
-    lazy var mockAPI: OMDBFetchMoviesUseCase = { OMDBFetchMoviesAPI(loader: mock) }()
-    lazy var realAPI: OMDBFetchMoviesUseCase = { OMDBFetchMoviesAPI() }()
+    var mockCache = MockJSONStore<OMDBModel>(storageType: .cache,isCachingEnabled: false)
+    lazy var mockAPI: OMDBFetchMoviesUseCase = { OMDBFetchMoviesAPI(loader: mock,cacheLoader: mockCache) }()
+    lazy var realAPI: OMDBFetchMoviesUseCase = { OMDBFetchMoviesAPI(cacheLoader: mockCache) }()
     
     
     
@@ -176,11 +176,7 @@ class OMDBFetchMoviesAPITests: XCTestCase {
             """
         return Data(json.utf8)
     }
-    
-  
-
-  
-    
+ 
 }
 
 
