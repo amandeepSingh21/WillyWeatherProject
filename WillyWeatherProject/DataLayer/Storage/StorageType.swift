@@ -1,23 +1,23 @@
 import Foundation
 
-enum StorageType {
+public enum StorageType {
     case cache
     case permanent
     
-    var searchPathDirectory: FileManager.SearchPathDirectory {
+    private var searchPathDirectory: FileManager.SearchPathDirectory {
         switch self {
         case .cache: return .cachesDirectory
         case .permanent: return .documentDirectory
         }
     }
     
-    var folder: URL {
+    public var folder: URL {
         let path = NSSearchPathForDirectoriesInDomains(self.searchPathDirectory, .userDomainMask, true).first!
         let subfolder = "com.md.WillyWeatherProject.json_storage"
         return URL(fileURLWithPath: path).appendingPathComponent(subfolder)
     }
     
-    func clearStorage() {
+    public func clearStorage() {
         try? FileManager.default.removeItem(at: folder)
     }
 }
