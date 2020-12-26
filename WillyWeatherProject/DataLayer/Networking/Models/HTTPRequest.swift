@@ -5,7 +5,7 @@ public struct HTTPRequest {
     public var method: HTTPMethod = .get
     public var headers: [String: String] = [:]
     public var body: HTTPBody = NoBody()
-    
+   
     public init() {
         self.scheme = "https"
         self.host = APIConfiguration.baseURL
@@ -36,7 +36,12 @@ public extension HTTPRequest {
     }
     
     mutating func setQueryParams(params: Encodable) {
+        
         self.components.setQueryItems(with: params.dictionary as! [String : String])
+    }
+    
+    var params: [URLQueryItem]? {
+        self.components.queryItems
     }
     
 }

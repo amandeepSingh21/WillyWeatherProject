@@ -1,6 +1,6 @@
 import Foundation
 
-public class JSONStorage<T> where T: Codable {
+public class JSONStore<T> where T: Codable {
     
     
     private let storageType: StorageType
