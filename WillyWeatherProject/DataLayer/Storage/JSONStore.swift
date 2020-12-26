@@ -60,5 +60,4 @@ public class JSONStore<T> where T: Codable {
         try? fileManager.createDirectory(at: folder, withIntermediateDirectories: false, attributes: nil)
     }
     
-    
 }
