@@ -1,20 +1,48 @@
 import Foundation
 
-public class JSONStore<T> where T: Codable {
+public class JSONCache<T: Codable> {
     
+    fileprivate let storageType: StorageType
+    fileprivate var uniquieIdentifier: String = ""
+    public var isCachingEnabled: Bool = true
     
-    private let storageType: StorageType
-    private var filename: String
-    
-    public init(storageType: StorageType, filename: String) {
+    public init(storageType: StorageType, isCachingEnabled: Bool = true) {
         self.storageType = storageType
-        self.filename = filename
-        self.ensureFolderExists()
+        self.isCachingEnabled = isCachingEnabled
+        
+    }
+ 
+    
+    public func save(_ object: T,uniquieIdentifier: String) {
+        
+    }
+    
+    public func storedValue(at uniquieIdentifier: String) -> T? {
+        return nil
+    }
+    
+    public func cleanup() {
+        
     }
     
     
-    public func save(_ object: T,filename: String) {
-        self.filename = filename
+}
+
+
+
+public class JSONStore<T>: JSONCache<T> where T: Codable {
+    
+    
+    public override init(storageType: StorageType, isCachingEnabled: Bool = true) {
+        super.init(storageType: storageType, isCachingEnabled: isCachingEnabled)
+        ensureFolderExists()
+    }
+   
+    
+    
+    public override func save(_ object: T,uniquieIdentifier: String) {
+        guard isCachingEnabled else { return }
+        self.uniquieIdentifier = uniquieIdentifier
         do {
             let data = try JSONEncoder().encode(object)
             try data.write(to: fileURL)
@@ -23,8 +51,9 @@ public class JSONStore<T> where T: Codable {
         }
     }
     
-    public func storedValue(at filename: String) -> T? {
-        self.filename = filename
+    public override func storedValue(at uniquieIdentifier: String) -> T? {
+        guard isCachingEnabled else { return nil }
+        self.uniquieIdentifier = uniquieIdentifier
         guard FileManager.default.fileExists(atPath: fileURL.path) else {
             return nil
         }
@@ -38,13 +67,17 @@ public class JSONStore<T> where T: Codable {
         }
     }
     
+    public override func cleanup() {
+        self.storageType.clearStorage()
+    }
+
     
     private var folder: URL {
         return storageType.folder
     }
     
     private var fileURL: URL {
-        return folder.appendingPathComponent(filename)
+        return folder.appendingPathComponent(uniquieIdentifier)
     }
     
     private func ensureFolderExists() {
@@ -61,3 +94,4 @@ public class JSONStore<T> where T: Codable {
     }
     
 }
+
