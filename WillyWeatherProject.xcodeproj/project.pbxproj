@@ -38,6 +38,7 @@
 		784517A02597C26500C6E1F2 /* MockJSONStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7845179F2597C26500C6E1F2 /* MockJSONStore.swift */; };
 		784517A22597C42200C6E1F2 /* OMDBCacheMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A12597C42200C6E1F2 /* OMDBCacheMoviesTests.swift */; };
 		784517A42597C46600C6E1F2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A32597C46600C6E1F2 /* MockData.swift */; };
+		784517A72597E77500C6E1F2 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A62597E77500C6E1F2 /* Paginator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		7845179F2597C26500C6E1F2 /* MockJSONStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSONStore.swift; sourceTree = "<group>"; };
 		784517A12597C42200C6E1F2 /* OMDBCacheMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBCacheMoviesTests.swift; sourceTree = "<group>"; };
 		784517A32597C46600C6E1F2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		784517A62597E77500C6E1F2 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		7845174C259615F100C6E1F2 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				784517A52597E76100C6E1F2 /* Paginator */,
 				784517962597A3D300C6E1F2 /* Storage */,
 				7845177225966CCE00C6E1F2 /* APIs */,
 				784517532596169200C6E1F2 /* Networking */,
@@ -307,6 +310,14 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		784517A52597E76100C6E1F2 /* Paginator */ = {
+			isa = PBXGroup;
+			children = (
+				784517A62597E77500C6E1F2 /* Paginator.swift */,
+			);
+			path = Paginator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -427,6 +438,7 @@
 				7845176325962A7300C6E1F2 /* JSONBody.swift in Sources */,
 				7845173725952D0700C6E1F2 /* AppDelegate.swift in Sources */,
 				7845176D2596662A00C6E1F2 /* URLSession+HTTPLoading.swift in Sources */,
+				784517A72597E77500C6E1F2 /* Paginator.swift in Sources */,
 				784517812596965A00C6E1F2 /* MockLoader.swift in Sources */,
 				784517792596729E00C6E1F2 /* Encodable+Extensions.swift in Sources */,
 				7845177425966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift in Sources */,
