@@ -5,7 +5,7 @@ extension URLSession: HTTPLoading {
     public func load(request: HTTPRequest, completion: @escaping (HTTPResult) -> Void) {
         
         guard let url = request.url else {
-            completion(.failure(.init(code: .invalidRequest, request: request, response: nil, underlyingError: nil)))
+              completion(.init(request: request, responseData: nil, response: nil, error: HTTPError(request: request, code: .invalidRequest)))
             return
         }
         
@@ -23,7 +23,7 @@ extension URLSession: HTTPLoading {
             do {
                 urlRequest.httpBody = try request.body.encode()
             } catch {
-                completion(.failure(.init(code: .encodingFailure, request: request, response: nil, underlyingError: error)))
+                completion(.init(request: request, responseData: nil, response: nil, error: HTTPError(request: request, code: .encodingFailure)))
                 return
             }
         }
