@@ -7,7 +7,7 @@ class OMDBDetailView: NiblessView {
     
     // MARK: - Properties
     private let viewModel: OMDBDetailViewModel
-    private let imageCache:ImageCache = FakeImageCache()
+    private let imageCache:ImageCache =  KingFisherImageCache()
     
     private let titleLabel : UILabel = {
         let lbl = UILabel()
@@ -20,7 +20,7 @@ class OMDBDetailView: NiblessView {
     
     private let yearLabel : UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .black
+        lbl.textColor = .white
         lbl.backgroundColor = UIColor.black.withAlphaComponent(0.1)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
@@ -100,7 +100,7 @@ class OMDBDetailView: NiblessView {
         textBackgroundView.leadingAnchor.constraint(equalTo: self.photoImageView.leadingAnchor, constant: 0).isActive = true
         textBackgroundView.trailingAnchor.constraint(equalTo: self.photoImageView.trailingAnchor, constant: 0).isActive = true
         textBackgroundView.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 0).isActive = true
-        textBackgroundView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        textBackgroundView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         textBackgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
         
         titleLabel.leadingAnchor.constraint(equalTo: self.textBackgroundView.leadingAnchor, constant: 16).isActive = true

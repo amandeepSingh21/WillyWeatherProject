@@ -7,7 +7,7 @@ class PhotoCell : UITableViewCell {
     static let id = "cell"
     
 
-    private let imageCache:ImageCache = FakeImageCache()
+    private let imageCache:ImageCache = KingFisherImageCache()
     
     var movie : Movie? {
         didSet {
