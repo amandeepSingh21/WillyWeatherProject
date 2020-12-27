@@ -10,8 +10,8 @@ enum RemoteAPIError: Error {
             return message
         case .statusError(let status):
             return "Request failed with code: \(status.rawValue)"
-        case .httpError:
-            return "Server error!"
+        case .httpError(let error):
+            return "\(error.code.message)"
         case .decoding:
             return "Decoding error!"
         }

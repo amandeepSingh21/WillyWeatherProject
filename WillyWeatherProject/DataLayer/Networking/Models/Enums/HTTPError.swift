@@ -15,6 +15,19 @@ public struct HTTPError: Error {
         case unknown
         case encodingFailure
         case timedOut
+        
+        var message: String {
+            switch self {
+            case .invalidRequest: return "Invalid Request"
+            case .cancelled: return "Request Cancelled"
+            case .cannotConnect: return "Please check your internet connection"
+            case .insecureConnection: return "Insecure connection"
+            case .invalidResponse: return "Invalid response"
+            case .unknown,.encodingFailure: return "Something went wrong"
+            case .timedOut: return "Request timed out"
+                
+            }
+        }
     }
 }
 
