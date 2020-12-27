@@ -50,6 +50,11 @@
 		784517B92598384500C6E1F2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B82598384500C6E1F2 /* PhotoCell.swift */; };
 		784517BC2598389E00C6E1F2 /* ImageCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517BB2598389E00C6E1F2 /* ImageCacheProtocol.swift */; };
 		784517BE259838C900C6E1F2 /* FakeImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517BD259838C900C6E1F2 /* FakeImageCache.swift */; };
+		784517C025983A5900C6E1F2 /* IntermediateStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517BF25983A5900C6E1F2 /* IntermediateStateViewController.swift */; };
+		784517C225983A7400C6E1F2 /* IntermediateStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C125983A7400C6E1F2 /* IntermediateStateView.swift */; };
+		784517C425983AE300C6E1F2 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C325983AE300C6E1F2 /* NiblessView.swift */; };
+		784517C625983AF600C6E1F2 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C525983AF600C6E1F2 /* NiblessViewController.swift */; };
+		784517C825983B6400C6E1F2 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C725983B6400C6E1F2 /* UIViewController+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +115,11 @@
 		784517B82598384500C6E1F2 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		784517BB2598389E00C6E1F2 /* ImageCacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheProtocol.swift; sourceTree = "<group>"; };
 		784517BD259838C900C6E1F2 /* FakeImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeImageCache.swift; sourceTree = "<group>"; };
+		784517BF25983A5900C6E1F2 /* IntermediateStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateStateViewController.swift; sourceTree = "<group>"; };
+		784517C125983A7400C6E1F2 /* IntermediateStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateStateView.swift; sourceTree = "<group>"; };
+		784517C325983AE300C6E1F2 /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
+		784517C525983AF600C6E1F2 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		784517C725983B6400C6E1F2 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +207,7 @@
 			children = (
 				784517B62598380000C6E1F2 /* OMDBView.swift */,
 				784517B82598384500C6E1F2 /* PhotoCell.swift */,
+				784517C125983A7400C6E1F2 /* IntermediateStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				7845173A25952D0700C6E1F2 /* MainViewController.swift */,
+				784517BF25983A5900C6E1F2 /* IntermediateStateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +236,8 @@
 				784517BA2598389300C6E1F2 /* ImageCache */,
 				784517512596163600C6E1F2 /* Extensions */,
 				784517B025982DE700C6E1F2 /* Bindable.swift */,
+				784517C325983AE300C6E1F2 /* NiblessView.swift */,
+				784517C525983AF600C6E1F2 /* NiblessViewController.swift */,
 			);
 			path = Reuseable;
 			sourceTree = "<group>";
@@ -231,6 +245,7 @@
 		784517512596163600C6E1F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				784517C725983B6400C6E1F2 /* UIViewController+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -459,6 +474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784517C825983B6400C6E1F2 /* UIViewController+extensions.swift in Sources */,
+				784517C425983AE300C6E1F2 /* NiblessView.swift in Sources */,
 				784517A02597C26500C6E1F2 /* MockJSONStore.swift in Sources */,
 				784517BE259838C900C6E1F2 /* FakeImageCache.swift in Sources */,
 				7845177D259673B900C6E1F2 /* OMDBRequest.swift in Sources */,
@@ -489,12 +506,15 @@
 				784517A72597E77500C6E1F2 /* Paginator.swift in Sources */,
 				784517812596965A00C6E1F2 /* MockLoader.swift in Sources */,
 				784517792596729E00C6E1F2 /* Encodable+Extensions.swift in Sources */,
+				784517C025983A5900C6E1F2 /* IntermediateStateViewController.swift in Sources */,
 				7845177425966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift in Sources */,
 				7845175925961ED700C6E1F2 /* HTTPStatus.swift in Sources */,
 				784517BC2598389E00C6E1F2 /* ImageCacheProtocol.swift in Sources */,
 				784517A92597E7DB00C6E1F2 /* OMDBPaginator.swift in Sources */,
 				7845179A2597A58700C6E1F2 /* JSONStore.swift in Sources */,
+				784517C625983AF600C6E1F2 /* NiblessViewController.swift in Sources */,
 				784517932597718D00C6E1F2 /* RemoteAPIError.swift in Sources */,
+				784517C225983A7400C6E1F2 /* IntermediateStateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
