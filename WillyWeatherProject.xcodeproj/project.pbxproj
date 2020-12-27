@@ -42,6 +42,9 @@
 		784517A92597E7DB00C6E1F2 /* OMDBPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */; };
 		784517AB259824A600C6E1F2 /* PaginationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517AA259824A600C6E1F2 /* PaginationTests.swift */; };
 		784517AD259824BA00C6E1F2 /* MockPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517AC259824BA00C6E1F2 /* MockPaginator.swift */; };
+		784517AF25982D1200C6E1F2 /* OMDBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517AE25982D1200C6E1F2 /* OMDBViewModel.swift */; };
+		784517B125982DE700C6E1F2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B025982DE700C6E1F2 /* Bindable.swift */; };
+		784517B325982E1E00C6E1F2 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B225982E1E00C6E1F2 /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBPaginator.swift; sourceTree = "<group>"; };
 		784517AA259824A600C6E1F2 /* PaginationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationTests.swift; sourceTree = "<group>"; };
 		784517AC259824BA00C6E1F2 /* MockPaginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPaginator.swift; sourceTree = "<group>"; };
+		784517AE25982D1200C6E1F2 /* OMDBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBViewModel.swift; sourceTree = "<group>"; };
+		784517B025982DE700C6E1F2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		784517B225982E1E00C6E1F2 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,8 @@
 		7845174E2596160600C6E1F2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				784517AE25982D1200C6E1F2 /* OMDBViewModel.swift */,
+				784517B225982E1E00C6E1F2 /* ViewState.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				784517512596163600C6E1F2 /* Extensions */,
+				784517B025982DE700C6E1F2 /* Bindable.swift */,
 			);
 			path = Reuseable;
 			sourceTree = "<group>";
@@ -433,11 +442,14 @@
 				7845175725961C3400C6E1F2 /* HTTPResponse.swift in Sources */,
 				784517982597A3E600C6E1F2 /* StorageType.swift in Sources */,
 				784517672596397200C6E1F2 /* NoBody.swift in Sources */,
+				784517B325982E1E00C6E1F2 /* ViewState.swift in Sources */,
 				78451795259775F200C6E1F2 /* OMDBAPIError.swift in Sources */,
 				7845175D2596259700C6E1F2 /* HTTPError.swift in Sources */,
+				784517AF25982D1200C6E1F2 /* OMDBViewModel.swift in Sources */,
 				78451755259617C900C6E1F2 /* HTTPRequest.swift in Sources */,
 				7845177F259673EC00C6E1F2 /* APIConfiguration.swift in Sources */,
 				784517772596723B00C6E1F2 /* URLComponents+Extensions.swift in Sources */,
+				784517B125982DE700C6E1F2 /* Bindable.swift in Sources */,
 				7845175F2596273100C6E1F2 /* HTTPMethod.swift in Sources */,
 				7845177B259672DE00C6E1F2 /* OMDBFetchMoviesUseCase.swift in Sources */,
 				7845173B25952D0700C6E1F2 /* MainViewController.swift in Sources */,
