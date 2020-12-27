@@ -39,6 +39,7 @@
 		784517A22597C42200C6E1F2 /* OMDBCacheMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A12597C42200C6E1F2 /* OMDBCacheMoviesTests.swift */; };
 		784517A42597C46600C6E1F2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A32597C46600C6E1F2 /* MockData.swift */; };
 		784517A72597E77500C6E1F2 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A62597E77500C6E1F2 /* Paginator.swift */; };
+		784517A92597E7DB00C6E1F2 /* OMDBPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		784517A12597C42200C6E1F2 /* OMDBCacheMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBCacheMoviesTests.swift; sourceTree = "<group>"; };
 		784517A32597C46600C6E1F2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		784517A62597E77500C6E1F2 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
+		784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBPaginator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				784517A62597E77500C6E1F2 /* Paginator.swift */,
+				784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */,
 			);
 			path = Paginator;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				784517792596729E00C6E1F2 /* Encodable+Extensions.swift in Sources */,
 				7845177425966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift in Sources */,
 				7845175925961ED700C6E1F2 /* HTTPStatus.swift in Sources */,
+				784517A92597E7DB00C6E1F2 /* OMDBPaginator.swift in Sources */,
 				7845179A2597A58700C6E1F2 /* JSONStore.swift in Sources */,
 				784517932597718D00C6E1F2 /* RemoteAPIError.swift in Sources */,
 			);

@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Paginator {
+public protocol Paginator {
     associatedtype PaginatedItem
     associatedtype Request
     var dataSource: [PaginatedItem] { get set }
