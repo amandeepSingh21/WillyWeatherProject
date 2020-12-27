@@ -46,6 +46,10 @@
 		784517B125982DE700C6E1F2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B025982DE700C6E1F2 /* Bindable.swift */; };
 		784517B325982E1E00C6E1F2 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B225982E1E00C6E1F2 /* ViewState.swift */; };
 		784517B52598311900C6E1F2 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B42598311900C6E1F2 /* ViewModelTests.swift */; };
+		784517B72598380000C6E1F2 /* OMDBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B62598380000C6E1F2 /* OMDBView.swift */; };
+		784517B92598384500C6E1F2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B82598384500C6E1F2 /* PhotoCell.swift */; };
+		784517BC2598389E00C6E1F2 /* ImageCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517BB2598389E00C6E1F2 /* ImageCacheProtocol.swift */; };
+		784517BE259838C900C6E1F2 /* FakeImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517BD259838C900C6E1F2 /* FakeImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,10 @@
 		784517B025982DE700C6E1F2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		784517B225982E1E00C6E1F2 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		784517B42598311900C6E1F2 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		784517B62598380000C6E1F2 /* OMDBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBView.swift; sourceTree = "<group>"; };
+		784517B82598384500C6E1F2 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		784517BB2598389E00C6E1F2 /* ImageCacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheProtocol.swift; sourceTree = "<group>"; };
+		784517BD259838C900C6E1F2 /* FakeImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +195,8 @@
 		7845174D2596160000C6E1F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				784517B62598380000C6E1F2 /* OMDBView.swift */,
+				784517B82598384500C6E1F2 /* PhotoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +221,7 @@
 		784517502596162E00C6E1F2 /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				784517BA2598389300C6E1F2 /* ImageCache */,
 				784517512596163600C6E1F2 /* Extensions */,
 				784517B025982DE700C6E1F2 /* Bindable.swift */,
 			);
@@ -339,6 +350,15 @@
 			path = Paginator;
 			sourceTree = "<group>";
 		};
+		784517BA2598389300C6E1F2 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				784517BB2598389E00C6E1F2 /* ImageCacheProtocol.swift */,
+				784517BD259838C900C6E1F2 /* FakeImageCache.swift */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,12 +460,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				784517A02597C26500C6E1F2 /* MockJSONStore.swift in Sources */,
+				784517BE259838C900C6E1F2 /* FakeImageCache.swift in Sources */,
 				7845177D259673B900C6E1F2 /* OMDBRequest.swift in Sources */,
 				7845175B2596254100C6E1F2 /* HTTPResult.swift in Sources */,
 				7845175725961C3400C6E1F2 /* HTTPResponse.swift in Sources */,
 				784517982597A3E600C6E1F2 /* StorageType.swift in Sources */,
 				784517672596397200C6E1F2 /* NoBody.swift in Sources */,
 				784517B325982E1E00C6E1F2 /* ViewState.swift in Sources */,
+				784517B72598380000C6E1F2 /* OMDBView.swift in Sources */,
 				78451795259775F200C6E1F2 /* OMDBAPIError.swift in Sources */,
 				7845175D2596259700C6E1F2 /* HTTPError.swift in Sources */,
 				784517AF25982D1200C6E1F2 /* OMDBViewModel.swift in Sources */,
@@ -460,6 +482,7 @@
 				784517612596289600C6E1F2 /* HTTPBody.swift in Sources */,
 				7845179125976F3500C6E1F2 /* OMDBModel.swift in Sources */,
 				784517652596369600C6E1F2 /* HTTPLoading.swift in Sources */,
+				784517B92598384500C6E1F2 /* PhotoCell.swift in Sources */,
 				7845176325962A7300C6E1F2 /* JSONBody.swift in Sources */,
 				7845173725952D0700C6E1F2 /* AppDelegate.swift in Sources */,
 				7845176D2596662A00C6E1F2 /* URLSession+HTTPLoading.swift in Sources */,
@@ -468,6 +491,7 @@
 				784517792596729E00C6E1F2 /* Encodable+Extensions.swift in Sources */,
 				7845177425966EAD00C6E1F2 /* OMDBFetchMoviesAPI.swift in Sources */,
 				7845175925961ED700C6E1F2 /* HTTPStatus.swift in Sources */,
+				784517BC2598389E00C6E1F2 /* ImageCacheProtocol.swift in Sources */,
 				784517A92597E7DB00C6E1F2 /* OMDBPaginator.swift in Sources */,
 				7845179A2597A58700C6E1F2 /* JSONStore.swift in Sources */,
 				784517932597718D00C6E1F2 /* RemoteAPIError.swift in Sources */,
