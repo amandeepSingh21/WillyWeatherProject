@@ -27,10 +27,20 @@ struct MockData {
         return  OMDBModel(results: [], totalResults: "0", response: "True")
     }
     
+    static var getEmptyData: Data {
+        let e = JSONEncoder()
+        return  try! e.encode(MockData.getEmpty)
+    }
+    
+    static var getNonEmptyData: Data {
+        let e = JSONEncoder()
+        return  try! e.encode(MockData.getNonEmpty)
+    }
+    
     static var getNonEmpty: OMDBModel {
         return  OMDBModel(results: [Movie(title: "Cool", year: "2018", imdbID: "123", type: .game, poster: "dummy_data")], totalResults: "1", response: "True")
         
     }
-
+    
     
 }

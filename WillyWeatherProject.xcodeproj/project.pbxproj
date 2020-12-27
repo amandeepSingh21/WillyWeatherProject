@@ -45,6 +45,7 @@
 		784517AF25982D1200C6E1F2 /* OMDBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517AE25982D1200C6E1F2 /* OMDBViewModel.swift */; };
 		784517B125982DE700C6E1F2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B025982DE700C6E1F2 /* Bindable.swift */; };
 		784517B325982E1E00C6E1F2 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B225982E1E00C6E1F2 /* ViewState.swift */; };
+		784517B52598311900C6E1F2 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517B42598311900C6E1F2 /* ViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		784517AE25982D1200C6E1F2 /* OMDBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBViewModel.swift; sourceTree = "<group>"; };
 		784517B025982DE700C6E1F2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		784517B225982E1E00C6E1F2 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		784517B42598311900C6E1F2 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				784517A12597C42200C6E1F2 /* OMDBCacheMoviesTests.swift */,
 				784517A32597C46600C6E1F2 /* MockData.swift */,
 				784517AA259824A600C6E1F2 /* PaginationTests.swift */,
+				784517B42598311900C6E1F2 /* ViewModelTests.swift */,
 			);
 			path = WillyWeatherProjectTests;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			files = (
 				784517892596986600C6E1F2 /* OMDBFetchMoviesAPITests.swift in Sources */,
 				784517AB259824A600C6E1F2 /* PaginationTests.swift in Sources */,
+				784517B52598311900C6E1F2 /* ViewModelTests.swift in Sources */,
 				784517A42597C46600C6E1F2 /* MockData.swift in Sources */,
 				784517A22597C42200C6E1F2 /* OMDBCacheMoviesTests.swift in Sources */,
 			);
