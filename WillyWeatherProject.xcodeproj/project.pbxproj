@@ -55,6 +55,9 @@
 		784517C425983AE300C6E1F2 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C325983AE300C6E1F2 /* NiblessView.swift */; };
 		784517C625983AF600C6E1F2 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C525983AF600C6E1F2 /* NiblessViewController.swift */; };
 		784517C825983B6400C6E1F2 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C725983B6400C6E1F2 /* UIViewController+extensions.swift */; };
+		784517CA2598CE7200C6E1F2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517C92598CE7100C6E1F2 /* DetailViewController.swift */; };
+		784517CC2598CE9900C6E1F2 /* OMDBDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517CB2598CE9900C6E1F2 /* OMDBDetailViewModel.swift */; };
+		784517CE2598CEAC00C6E1F2 /* OMDBDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517CD2598CEAC00C6E1F2 /* OMDBDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +123,9 @@
 		784517C325983AE300C6E1F2 /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
 		784517C525983AF600C6E1F2 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
 		784517C725983B6400C6E1F2 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		784517C92598CE7100C6E1F2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		784517CB2598CE9900C6E1F2 /* OMDBDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBDetailViewModel.swift; sourceTree = "<group>"; };
+		784517CD2598CEAC00C6E1F2 /* OMDBDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,7 @@
 				784517B62598380000C6E1F2 /* OMDBView.swift */,
 				784517B82598384500C6E1F2 /* PhotoCell.swift */,
 				784517C125983A7400C6E1F2 /* IntermediateStateView.swift */,
+				784517CD2598CEAC00C6E1F2 /* OMDBDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 			children = (
 				784517AE25982D1200C6E1F2 /* OMDBViewModel.swift */,
 				784517B225982E1E00C6E1F2 /* ViewState.swift */,
+				784517CB2598CE9900C6E1F2 /* OMDBDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 			children = (
 				7845173A25952D0700C6E1F2 /* MainViewController.swift */,
 				784517BF25983A5900C6E1F2 /* IntermediateStateViewController.swift */,
+				784517C92598CE7100C6E1F2 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -497,10 +506,13 @@
 				7845173B25952D0700C6E1F2 /* MainViewController.swift in Sources */,
 				784517AD259824BA00C6E1F2 /* MockPaginator.swift in Sources */,
 				784517612596289600C6E1F2 /* HTTPBody.swift in Sources */,
+				784517CE2598CEAC00C6E1F2 /* OMDBDetailView.swift in Sources */,
+				784517CC2598CE9900C6E1F2 /* OMDBDetailViewModel.swift in Sources */,
 				7845179125976F3500C6E1F2 /* OMDBModel.swift in Sources */,
 				784517652596369600C6E1F2 /* HTTPLoading.swift in Sources */,
 				784517B92598384500C6E1F2 /* PhotoCell.swift in Sources */,
 				7845176325962A7300C6E1F2 /* JSONBody.swift in Sources */,
+				784517CA2598CE7200C6E1F2 /* DetailViewController.swift in Sources */,
 				7845173725952D0700C6E1F2 /* AppDelegate.swift in Sources */,
 				7845176D2596662A00C6E1F2 /* URLSession+HTTPLoading.swift in Sources */,
 				784517A72597E77500C6E1F2 /* Paginator.swift in Sources */,

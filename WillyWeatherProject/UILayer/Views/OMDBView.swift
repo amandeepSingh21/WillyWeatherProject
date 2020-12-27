@@ -89,6 +89,12 @@ extension OMDBView: UITableViewDelegate {
         return 250
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.didSelectItem(item: self.viewModel.entity[indexPath.row])
     }

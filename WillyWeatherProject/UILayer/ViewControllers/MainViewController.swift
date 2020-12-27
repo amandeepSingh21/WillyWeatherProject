@@ -63,7 +63,8 @@ class MainViewController: NiblessViewController {
 
 extension MainViewController: OMDBViewViewSelectionDelegate {
     func didSelectItem(item: Movie) {
-        
+        let vc = DetailViewController(viewModel: OMDBDetailViewModel(movie: item))
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

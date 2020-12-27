@@ -22,6 +22,6 @@ public class Bindable<T> {
     
    public func bind(listener: Listener?) {
         self.listener = listener
-        listener?(value)
+      
     }
 }
