@@ -59,12 +59,20 @@
 		784517CC2598CE9900C6E1F2 /* OMDBDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517CB2598CE9900C6E1F2 /* OMDBDetailViewModel.swift */; };
 		784517CE2598CEAC00C6E1F2 /* OMDBDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517CD2598CEAC00C6E1F2 /* OMDBDetailView.swift */; };
 		784517D02598F4FC00C6E1F2 /* KingFisherCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517CF2598F4FC00C6E1F2 /* KingFisherCache.swift */; };
+		784517D82599286D00C6E1F2 /* WillyWeatherProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517D72599286D00C6E1F2 /* WillyWeatherProjectUITests.swift */; };
 		97080D113F1B7B1385EF21AD /* Pods_WillyWeatherProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B3FAE086D6333CC3FF73FC /* Pods_WillyWeatherProjectTests.framework */; };
 		99E294C84BF96568314D73A1 /* Pods_WillyWeatherProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F783A7488A26164BED1121D4 /* Pods_WillyWeatherProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7845178B2596986600C6E1F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7845172B25952D0700C6E1F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7845173225952D0700C6E1F2;
+			remoteInfo = WillyWeatherProject;
+		};
+		784517DA2599286D00C6E1F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7845172B25952D0700C6E1F2 /* Project object */;
 			proxyType = 1;
@@ -134,6 +142,9 @@
 		784517CB2598CE9900C6E1F2 /* OMDBDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBDetailViewModel.swift; sourceTree = "<group>"; };
 		784517CD2598CEAC00C6E1F2 /* OMDBDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBDetailView.swift; sourceTree = "<group>"; };
 		784517CF2598F4FC00C6E1F2 /* KingFisherCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherCache.swift; sourceTree = "<group>"; };
+		784517D52599286D00C6E1F2 /* WillyWeatherProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WillyWeatherProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		784517D72599286D00C6E1F2 /* WillyWeatherProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillyWeatherProjectUITests.swift; sourceTree = "<group>"; };
+		784517D92599286D00C6E1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B00EA5EB920F49D17321B60 /* Pods-WillyWeatherProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillyWeatherProjectTests.release.xcconfig"; path = "Target Support Files/Pods-WillyWeatherProjectTests/Pods-WillyWeatherProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		F783A7488A26164BED1121D4 /* Pods_WillyWeatherProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillyWeatherProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,6 +166,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		784517D22599286D00C6E1F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -172,6 +190,7 @@
 			children = (
 				7845173525952D0700C6E1F2 /* WillyWeatherProject */,
 				784517872596986600C6E1F2 /* WillyWeatherProjectTests */,
+				784517D62599286D00C6E1F2 /* WillyWeatherProjectUITests */,
 				7845173425952D0700C6E1F2 /* Products */,
 				B0BD6F044C47AAC2ED9C2F0F /* Pods */,
 				1F9A2ED7FA9EF37D1B1F943E /* Frameworks */,
@@ -183,6 +202,7 @@
 			children = (
 				7845173325952D0700C6E1F2 /* WillyWeatherProject.app */,
 				784517862596986600C6E1F2 /* WillyWeatherProjectTests.xctest */,
+				784517D52599286D00C6E1F2 /* WillyWeatherProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -407,6 +427,15 @@
 			path = ImageCache;
 			sourceTree = "<group>";
 		};
+		784517D62599286D00C6E1F2 /* WillyWeatherProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				784517D72599286D00C6E1F2 /* WillyWeatherProjectUITests.swift */,
+				784517D92599286D00C6E1F2 /* Info.plist */,
+			);
+			path = WillyWeatherProjectUITests;
+			sourceTree = "<group>";
+		};
 		B0BD6F044C47AAC2ED9C2F0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +488,24 @@
 			productReference = 784517862596986600C6E1F2 /* WillyWeatherProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		784517D42599286D00C6E1F2 /* WillyWeatherProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784517DE2599286D00C6E1F2 /* Build configuration list for PBXNativeTarget "WillyWeatherProjectUITests" */;
+			buildPhases = (
+				784517D12599286D00C6E1F2 /* Sources */,
+				784517D22599286D00C6E1F2 /* Frameworks */,
+				784517D32599286D00C6E1F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				784517DB2599286D00C6E1F2 /* PBXTargetDependency */,
+			);
+			name = WillyWeatherProjectUITests;
+			productName = WillyWeatherProjectUITests;
+			productReference = 784517D52599286D00C6E1F2 /* WillyWeatherProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -473,6 +520,10 @@
 						CreatedOnToolsVersion = 11.6;
 					};
 					784517852596986600C6E1F2 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7845173225952D0700C6E1F2;
+					};
+					784517D42599286D00C6E1F2 = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 7845173225952D0700C6E1F2;
 					};
@@ -493,6 +544,7 @@
 			targets = (
 				7845173225952D0700C6E1F2 /* WillyWeatherProject */,
 				784517852596986600C6E1F2 /* WillyWeatherProjectTests */,
+				784517D42599286D00C6E1F2 /* WillyWeatherProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -508,6 +560,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		784517842596986600C6E1F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784517D32599286D00C6E1F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -645,6 +704,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		784517D12599286D00C6E1F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784517D82599286D00C6E1F2 /* WillyWeatherProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -652,6 +719,11 @@
 			isa = PBXTargetDependency;
 			target = 7845173225952D0700C6E1F2 /* WillyWeatherProject */;
 			targetProxy = 7845178B2596986600C6E1F2 /* PBXContainerItemProxy */;
+		};
+		784517DB2599286D00C6E1F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7845173225952D0700C6E1F2 /* WillyWeatherProject */;
+			targetProxy = 784517DA2599286D00C6E1F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -861,6 +933,44 @@
 			};
 			name = Release;
 		};
+		784517DC2599286D00C6E1F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3N7GU5TKY;
+				INFOPLIST_FILE = WillyWeatherProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.md.WillyWeatherProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WillyWeatherProject;
+			};
+			name = Debug;
+		};
+		784517DD2599286D00C6E1F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y3N7GU5TKY;
+				INFOPLIST_FILE = WillyWeatherProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.md.WillyWeatherProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WillyWeatherProject;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -887,6 +997,15 @@
 			buildConfigurations = (
 				7845178E2596986600C6E1F2 /* Debug */,
 				7845178F2596986600C6E1F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		784517DE2599286D00C6E1F2 /* Build configuration list for PBXNativeTarget "WillyWeatherProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				784517DC2599286D00C6E1F2 /* Debug */,
+				784517DD2599286D00C6E1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

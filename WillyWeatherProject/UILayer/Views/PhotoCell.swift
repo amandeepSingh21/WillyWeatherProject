@@ -54,6 +54,7 @@ class PhotoCell : UITableViewCell {
         photoImageView.addSubview(textBackgroundView)
         textBackgroundView.addSubview(titleLabel)
         setupConstraints()
+        isAccessibilityElement = true
         self.contentView.backgroundColor = .black
     }
     
