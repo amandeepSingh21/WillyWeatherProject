@@ -1,9 +1,8 @@
 import Foundation
-
 import UIKit
 
 
-class DetailViewController: NiblessViewController {
+final class DetailViewController: NiblessViewController {
     
     //MARK: - Properties
     var rootView: OMDBDetailView

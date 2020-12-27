@@ -1,7 +1,7 @@
 import UIKit
 
 
-class MainViewController: NiblessViewController {
+final class MainViewController: NiblessViewController {
     
     //MARK: - Child View Controller
     let intermediateViewController: IntermediateViewController

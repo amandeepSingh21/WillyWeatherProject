@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class IntermediateStateView: UIView {
+class IntermediateStateView: NiblessView {
     
     // MARK: - Properties
     var message: String {
@@ -30,8 +30,5 @@ class IntermediateStateView: UIView {
         messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
 

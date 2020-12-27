@@ -2,8 +2,7 @@ import Foundation
 import UIKit
 
 
-
-class OMDBDetailView: NiblessView {
+final class OMDBDetailView: NiblessView {
     
     // MARK: - Properties
     private let viewModel: OMDBDetailViewModel
@@ -85,12 +84,7 @@ class OMDBDetailView: NiblessView {
         typeLabel.text = self.viewModel.movie.type.rawValue.capitalized
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-    }
-    
-
+  
     private func setupConstraints() {
         photoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         photoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true

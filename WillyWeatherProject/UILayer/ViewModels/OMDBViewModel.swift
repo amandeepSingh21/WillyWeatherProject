@@ -1,13 +1,12 @@
 import Foundation
 
-class OMDBViewModel {
-    //MARK:- Properties
+final class OMDBViewModel {
+  
      //MARK: Controller bindings
     var viewState: Bindable<ViewState> =  Bindable(ViewState.loading)
-   
-    
     //MARK: View bindings
     var indexPathsToReload: Bindable<[IndexPath]> = Bindable([IndexPath(item: 0, section: 0)])
+    //MARK:- Properties
     var paginator: OMDBPaginator?
      var entity: [Movie] = [Movie]()
     private let repository: OMDBFetchMoviesUseCase

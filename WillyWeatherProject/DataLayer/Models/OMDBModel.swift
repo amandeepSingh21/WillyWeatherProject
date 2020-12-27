@@ -28,10 +28,6 @@ struct Movie: Codable {
         case poster = "Poster"
     }
 
-    var posterURL:URL? {
-        return URL(string: poster)
-    }
-
 }
 
 enum TypeEnum: String, Codable {

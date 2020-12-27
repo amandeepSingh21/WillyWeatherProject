@@ -2,9 +2,8 @@ import Foundation
 
 struct OMDBFetchMoviesAPI: OMDBFetchMoviesUseCase {
     
-   
-    let loader: HTTPLoading
-    let cacheLoader: JSONCache<OMDBModel>
+    private let loader: HTTPLoading
+    private let cacheLoader: JSONCache<OMDBModel>
     
     
     init(loader: HTTPLoading = URLSession.shared,
@@ -57,7 +56,7 @@ struct OMDBFetchMoviesAPI: OMDBFetchMoviesUseCase {
         }
     }
     
-     func cacheName(request: HTTPRequest) -> String {
+     private func cacheName(request: HTTPRequest) -> String {
         var page = ""
         var term = ""
         request.params?.forEach({ (item) in
@@ -72,9 +71,6 @@ struct OMDBFetchMoviesAPI: OMDBFetchMoviesUseCase {
         return term + "&" + page
     }
 
-    
-  
-    
 }
 
 

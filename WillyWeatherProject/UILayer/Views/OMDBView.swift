@@ -6,7 +6,7 @@ protocol OMDBViewViewSelectionDelegate: class {
     func didSelectItem(item: Movie)
 }
 
-class OMDBView: NiblessView {
+final class OMDBView: NiblessView {
     
     // MARK: - Properties
     private let viewModel: OMDBViewModel
@@ -86,11 +86,11 @@ extension OMDBView: UITableViewDataSource {
 extension OMDBView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return UIDevice.current.userInterfaceIdiom == .pad ? 500 : 250
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return UIDevice.current.userInterfaceIdiom == .pad ? 500 : 250
     }
     
     
@@ -113,9 +113,5 @@ extension OMDBView: UITableViewDelegate {
         }
         
     }
-    
-    
-    
-    
 }
 

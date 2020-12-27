@@ -1,6 +1,6 @@
 import Foundation
 
-class OMDBDetailViewModel {
+final class OMDBDetailViewModel {
     
     let movie: Movie
     init(movie:Movie) {
