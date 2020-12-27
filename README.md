@@ -32,6 +32,7 @@ This project is build using Swift 5.
  - There are tests to test the pagination logic.
  - There are tests for networking and caching.
  - There are basic UI tests for navigation logic.
+ 
  ![](docs/coverage.png)
 
 
