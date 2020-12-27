@@ -40,6 +40,8 @@
 		784517A42597C46600C6E1F2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A32597C46600C6E1F2 /* MockData.swift */; };
 		784517A72597E77500C6E1F2 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A62597E77500C6E1F2 /* Paginator.swift */; };
 		784517A92597E7DB00C6E1F2 /* OMDBPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */; };
+		784517AB259824A600C6E1F2 /* PaginationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517AA259824A600C6E1F2 /* PaginationTests.swift */; };
+		784517AD259824BA00C6E1F2 /* MockPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784517AC259824BA00C6E1F2 /* MockPaginator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		784517A32597C46600C6E1F2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		784517A62597E77500C6E1F2 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBPaginator.swift; sourceTree = "<group>"; };
+		784517AA259824A600C6E1F2 /* PaginationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationTests.swift; sourceTree = "<group>"; };
+		784517AC259824BA00C6E1F2 /* MockPaginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPaginator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +302,7 @@
 				7845178A2596986600C6E1F2 /* Info.plist */,
 				784517A12597C42200C6E1F2 /* OMDBCacheMoviesTests.swift */,
 				784517A32597C46600C6E1F2 /* MockData.swift */,
+				784517AA259824A600C6E1F2 /* PaginationTests.swift */,
 			);
 			path = WillyWeatherProjectTests;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			children = (
 				784517A62597E77500C6E1F2 /* Paginator.swift */,
 				784517A82597E7DB00C6E1F2 /* OMDBPaginator.swift */,
+				784517AC259824BA00C6E1F2 /* MockPaginator.swift */,
 			);
 			path = Paginator;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				7845175F2596273100C6E1F2 /* HTTPMethod.swift in Sources */,
 				7845177B259672DE00C6E1F2 /* OMDBFetchMoviesUseCase.swift in Sources */,
 				7845173B25952D0700C6E1F2 /* MainViewController.swift in Sources */,
+				784517AD259824BA00C6E1F2 /* MockPaginator.swift in Sources */,
 				784517612596289600C6E1F2 /* HTTPBody.swift in Sources */,
 				7845179125976F3500C6E1F2 /* OMDBModel.swift in Sources */,
 				784517652596369600C6E1F2 /* HTTPLoading.swift in Sources */,
@@ -457,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				784517892596986600C6E1F2 /* OMDBFetchMoviesAPITests.swift in Sources */,
+				784517AB259824A600C6E1F2 /* PaginationTests.swift in Sources */,
 				784517A42597C46600C6E1F2 /* MockData.swift in Sources */,
 				784517A22597C42200C6E1F2 /* OMDBCacheMoviesTests.swift in Sources */,
 			);
